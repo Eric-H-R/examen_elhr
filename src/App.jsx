@@ -42,12 +42,6 @@ const App = () => {
     cargarUsuarios();
   }, []);
 
-  const mostrarDetalles = (usuario) => {
-    const { name, email, address } = usuario;
-    const { city } = address;
-    alert(`Nombre: ${name}\nEmail: ${email}\nCiudad: ${city}`);
-  };
-
   const eliminarPorIndice = () => {
     const idx = parseInt(indexEliminar);
     if (!isNaN(idx) && idx >= 0 && idx < usuarios.length) {
@@ -81,7 +75,7 @@ const App = () => {
         </button>
       </div>
 
-      <ListaUsuarios usuarios={usuarios} mostrarDetalles={mostrarDetalles} />
+      <ListaUsuarios usuarios={usuarios} />
     </div>
     </>
     
